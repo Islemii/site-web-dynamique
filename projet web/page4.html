@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchase Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    function validateEmail(email) {
+      var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return re.test(email);
+    }
+
+    function submitForm() {
+      var $result = $("#result");
+      var email = $("#email").val();
+      $result.text("");
+
+      if (validateEmail(email)) {
+        // Submit form data via AJAX
+        $.ajax({
+          type: "POST",
+          url: "insert.php",
+          data: $("form").serialize(),
+          success: function(response) {
+            $result.text(response);
+            window.location.href = "PAGE3.HTML";
+          },
+          error: function(xhr, status, error) {
+            console.error(xhr.responseText);
+          }
+        });
+      } else {
+        // Display validation message
+        $result.text(email + " is not valid");
+        $result.css("color", "red");
+      }
+      return false; // Prevent default form submission
+    }
+
+    $("#validate").on("click", submitForm);
+  });
+</script>
+
+  
+</script>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(255, 239, 231), rgba(109, 17, 17, 0.575));
+    margin: 0;
+    padding: 0;
+  }
+  .container2 {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #eee3dc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select[id="mySelect"],
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+
+  }
+  input[type="Rollback"] {
+    background-color: #ee1515;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    font-size: 16px;
+  }
+  input[type="Rollback"]:hover {
+    background-color: #8a2323;
+  }
+  .radio-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .radio-group label {
+    margin-right: 20px;}
+</style>
+</head>
+<body>
+
+<div class="container2">
+  <h2>Purchase Form</h2>
+  <form action="PAGE3.HTML" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+ 
+   
+    <div class="form-group">
+        <label for="address">Shipping Address:</label><br>
+    <textarea id="adress" name="adress" required></textarea><br>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" required><br>
+    </div>
+    
+      <label for="combobox">Country:</label>
+      <div class="form-group">
+        <select id="mySelect" name="country">
+            <option value="volvo">Tunisia</option>
+            <option value="saab">Deutschland</option>
+            <option value="mercedes">Algeria</option>
+            <option value="audi">France</option>
+            <option value="volvo">Australia</option>
+            <option value="saab">United States</option>
+            <option value="mercedes">England</option>
+            <option value="audi">United Arab Emirates</option>
+            <option value="volvo">Russia</option>
+            <option value="saab">Japan</option>
+            <option value="mercedes">Italy</option>
+            <option value="audi"> Indonesia</option>
+          </select>
+          
+        </div> 
+      <div class="form-group">
+      <label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> </div>
+<label for="txt">Payment Method:</label><br>
+
+<div class="radio-group">
+<input type="radio" id="Cashondelivery" name="paymentmethod" value="Cashondelivery">
+  <label for="male">Cash on delivery</label>
+  <input type="radio" id="fpaypal" name="paymentmethod" value="paypal">
+  <label for="female">paypal</label>
+  <input type="radio" id="creditcard" name="paymentmethod" value="creditcard">
+  <label for="other">credit card</label></div><br><br>
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+    <input type="submit" value="Submit" id='validate'> <br><br>
+    <a href="index.html"><input type="Rollback" value="Rollback"></a><br>
+  </form>
+  <h2 id='result'></h2>
+</div>
+
+</body>
+</html>

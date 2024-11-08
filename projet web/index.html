@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>projet1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html" class="nav_a">Home</a>
+        <a href="#id4" class="nav_a">About</a>
+        <a href="#id2" class="nav_a">Services</a>
+        <a href="#id1" class="nav_a">Products</a>
+        <a href="page5.html" class="nav_a">Contact</a>
+        <a href="#id3" class="nav_a">News</a>
+        <a href="#index.html" class="logos"><img id="id0" src="logo.png" alt="logo"class="logos" style="height: 3vi;"></a>
+    </nav>
+  
+   
+    <div class="bgImageContainer">
+        <img src=' c.jpg' class="bgImage" style="height: 45vi">
+          <div class="GTNBouquetAndButtonDiv">
+            <h1 class="GTNBouquet"></h1><br>
+            <h1 style="color: rgb(67, 47, 28); font-size:3vw ">WELCOME FAIRY TOUCH</h1><br><br><br>
+            
+                <a href="#id1" class="GNButton">
+              
+              <button class="button" style="vertical-align:middle"><span >SHOP</span></button> </a><br>
+            </div>
+      
+        
+      </div><br><br><br>
+      <div class="container1">
+        <p id="id3"  >OUR BEST SALES</p>
+    </div>
+     
+        <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="a1.jpg" style="width:100%">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="a2.jpg" style="width:100%">
+             
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="a3.jpg" style="width:100%">
+            
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4/ 6</div>
+                <img src="a4.jpg" style="width:100%">
+                
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5/ 6</div>
+                <img src="a8.jpg" style="width:100%">
+               
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6/ 6</div>
+                <img src="a10.jpg" style="width:100%">
+
+              </div>
+
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span> 
+               <span class="dot" onclick="currentSlide(6)"></span>  
+            </div><br><br><br>
+            <script src="main.js">
+        
+                showSlides();
+            
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+            
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+            
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    
+                    // Handle slideIndex exceeding the slide count
+                    if (n >= slides.length) {
+                        slideIndex = 0;
+                    } else if (n < 0) {
+                        slideIndex = slides.length - 1;
+                    } else {
+                        slideIndex = n;
+                    }
+            
+                    // Hide all slides
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+            
+                    // Remove the "active" class from all dots
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+            
+                    // Show the current slide and add "active" class to its corresponding dot
+                    slides[slideIndex].style.display = "block";  
+                    dots[slideIndex].className += " active";
+                }
+            </script>
+            
+            <a href="#id2">
+            <button class="btn"><h2>more..</h2></button><br><br><br><br>
+              </a><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+            <h1 id="id2" style="text-align: center;">Art Galery</h1>
+       <div class="fadein">
+            <img src="a1.jpg" class="pics">
+        <img src="a2.jpg" class="pics"> 
+        <img src="a3.jpg" class="pics">
+        <img src="a4.jpg" class="pics"> 
+        <img src="a5.jpg" class="pics"> 
+        <img src="a6.jpg" class="pics">
+        <img src="a7.jpg" class="pics">
+        <img src="a8.jpg" class="pics"> 
+        <img src="a9.jpg" class="pics"> 
+        <img src="a10.jpg" class="pics"> 
+        <img src="a11.jpg" class="pics"> 
+        <img src="a17.jpg" class="pics">
+        <img src="a13.jpg" class="pics"> 
+        <img src="a14.jpg" class="pics"> 
+     
+       <img src="a16.jpg" class="pics"></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="id1" style="text-align: center;">LES ARTICLES DISPONIBLES</ARTICLe></h1>
+
+<div class="gallery">
+ 
+    <img src="a8.jpg"   width="600" height="400">
+  <a href="page4.html"> <button  class="btn2">Buy</button></a> 
+  <div class="desc">350TND</div>
+</div>
+
+
+<div class="gallery">
+ 
+    <img src="a7.jpg"  width="600" height="400">
+    <a href="page4.html"> <button  class="btn2">Buy</button></a>
+  <div class="desc">100TND</div>
+</div>
+
+<div class="gallery">
+  
+    <img src="a6.jpg"  width="600" height="400">
+    <a href="page4.html"></a><button  class="btn2">Buy</button></a>
+  <div class="desc">350TND</div>
+</div>
+
+<div class="gallery">
+ 
+    <img src="a11.jpg"  width="600" height="400">
+    <a href="page4.html"> <button  class="btn2">Buy</button></a>
+  <div class="desc">220TND</div>
+</div>
+<div class="gallery">
+ 
+  <img src="a4.jpg" width="600" height="400">
+  <a href="page4.html"> <button  class="btn2">Buy</button></a>
+<div class="desc">150TND</div>
+</div>
+
+
+<div class="gallery">
+
+  <img src="a3.jpg"  width="600" height="400">
+  <a href="page4.html"> <button  class="btn2">Buy</button></a>
+<div class="desc">100TND</div>
+</div>
+
+<div class="gallery">
+
+  <img src="a2.jpg" width="600" height="400">
+  <a href="page4.html"> <button  class="btn2">Buy</button></a>
+<div class="desc">200TND</div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<footer id="dk-footer" class="dk-footer">
+  <div class="container">
+      <div class="row">
+        <h6 style="text-align: center;">F</h6>
+          <div class="col-md-12 col-lg-4">
+              <div class="dk-footer-box-info">
+                  <a href="index.html" class="footer-logo">
+                      <img style="padding-left: 100px" id="id4" src="logo.png" alt="footer_logo" class="img-fluid">
+                  </a>
+                  <div class="social-icons">
+                      <h3  style="text-align: center;">Follow us</h3>
+                      <ul>
+                          <li>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                          </li>
+                          <li>
+                            <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fab fa-google-plus"></i>
+                              </a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.instagram.com/">
+                                  <i class="fab fa-instagram"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- End Social link -->
+              </div>
+              <!-- End Footer info -->
+              <div class="footer-awarad">
+                  <img src="P2.jpg" alt="">
+                  <p>FAIRY TOUCH</p>
+              </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-12 col-lg-8">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="contact-us">
+                          <div class="contact-icon">
+                              <i class="fa fa-map-o" aria-hidden="true"></i>
+                          </div>
+                          <!-- End contact Icon -->
+                            <br><br><br><br><br>
+                      </div>
+                      <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                  <div class="col-md-6">
+                      <div class="contact-us contact-us-last">
+                          <div class="contact-icon">
+                              <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                          </div>
+                          <!-- End contact Icon -->
+                           <div class="contact-info">
+                              <h3>+216   56 078 444</h3>
+                              <h3 style="text-align: center;color: rgb(80, 38, 16);" > Give us a call</h3>
+                          </div>
+                          <!-- End Contact Info -->
+                      </div>
+                      <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+              </div>
+              <!-- End Contact Row -->
+              <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget footer-left-widget">
+                          <div class="section-heading">
+                              <h3 style="text-align: center;padding-left: 40px;">Useful Links</h3>
+                              <span style="padding-left: 140px; "  class="animate-border border-black"></span>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#id4">About us</a>
+                              </li>
+                              <li>
+                                  <a href="#id3">Services</a>
+                              </li>
+                              <li>
+                                  <a href="#id2">Projects</a>
+                              </li>
+                              <li>
+                                  <a href="PAGE3.HTML">Our Team</a>
+                              </li>
+                          </ul>
+                          <ul>
+                              <li>
+                                  <a href="page5.html">Contact us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="#">Testimonials</a>
+                              </li>
+                              <li>
+                                  <a href="#">Faq</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- End Footer Widget -->
+                  </div>
+                  <!-- End col -->
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget">
+                          <div class="section-heading">
+                              <h3 >Vos Avis</h3>
+                              <span style="padding-left: 50px;" class="animate-border border-black"></span>
+                          </div>
+                          <form action="page6.html">
+                              <div class="form-row">
+                                  <div class="col dk-footer-form">
+                                      <input  class="form-control" placeholder="Feel Free!" name="avis">
+                                       <button type="submit"> send</button>
+                                  </div>
+                              </div>
+                          </form>
+                          <!-- End form -->
+                      </div>
+                      <!-- End footer widget -->
+                  </div>
+                  <!-- End Col -->
+              </div>
+              <!-- End Row -->
+          </div>
+          <!-- End Col -->
+      </div>
+      <!-- End Widget Row -->
+  </div>
+  <!-- End Contact Container -->
+
+
+  <div class="copyright">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <span>Copyright © 2024, All Right Reserved Seobin</span>
+              </div>
+              <!-- End Col -->
+              <div class="col-md-6">
+                  <div class="copyright-menu">
+                      <ul>
+                          <li>
+                              <a href="index.html">Home</a>
+                          </li>
+                          <li>
+                              <a href="#">Terms</a>
+                          </li>
+                          <li>
+                              <a href="#">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="page5.html">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- End col -->
+          </div>
+          <!-- End Row -->
+      </div>
+      <!-- End Copyright Container -->
+  </div>
+  <!-- End Copyright -->
+  <!-- Back to top -->
+  <div id="back-to-top" class="back-to-top">
+      <a href="#id0"><button class="btn btn-dark" title="Back to Top" style="display: block;">
+          <i class="fa fa-angle-up"></i>
+      </button></a>
+  </div>
+  <!-- End Back to top -->
+</footer>
+
+
+</body>
+</html>
